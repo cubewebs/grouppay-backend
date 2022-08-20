@@ -4,7 +4,7 @@
 
 const { Router } = require('express');
 const { check } = require('express-validator');
-const { getUsers, createUser, updateUser } = require('../controllers/users.controller');
+const { getUsers, createUser, updateUser, deleteUser } = require('../controllers/users.controller');
 const { validateFields } = require('../middlewares/validate-fields')
 
 const router = Router();
@@ -26,6 +26,8 @@ router.put('/:id', [
     check('role', 'The role is required').not().isEmpty(),
 
 ], updateUser);
+
+router.delete('/:id', deleteUser);
 
 
 module.exports = router;
