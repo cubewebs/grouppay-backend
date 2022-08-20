@@ -1,3 +1,8 @@
+# Backend de Grouppay App
+# Recuerden ejecutar 
+npm install
+```
+
 …or create a new repository on the command line
 echo "# grouppay-backend" >> README.md
 git init
